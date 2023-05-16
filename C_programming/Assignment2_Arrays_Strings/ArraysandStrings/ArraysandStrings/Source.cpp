@@ -1,5 +1,6 @@
 #include "stdlib.h"
 #include "stdio.h"
+#include"string.h"
 
 
 /************************************** Arrays ***************************************/
@@ -182,15 +183,82 @@ void Ex5_Arrays()
 
 
 /************************************* Strings ***************************************/
+//Ex1
+void Ex1_Strings()
+{
+	char text[30], c = 0;
+	printf("Enter a string: ");
+	fgets(text, sizeof(text),stdin);
+	printf("Enter a character to find its frequency: ");
+	scanf_s("%c", &c, 1);
+
+	int i = 0, counter = 0;
+	while (text[i] != 0)
+	{
+		if (text[i] == c)
+			counter++;
+		i++;
+	}
+
+	printf("Frequency of %c is %d\n", c, counter);
+}
 
 
+//Ex2
+void Ex2_Strings()
+{
+	int len = 0, i=0;
+	char text[30];
+	printf("Enter a string: ");
+	fgets(text, sizeof(text), stdin);
+
+	while (text[i] != 0)
+	{
+		len++;
+		i++;
+	}
+	len--;					//because fgets() adds a newline character '\n' to the string before the NULL character
+
+	printf("Length of your String is: %d", len);
+}
+
+
+//Ex3
+void Ex3_Strings()
+{
+	char text[30], newText[30] = {0};
+	printf("Enter a string: ");
+	fgets(text, sizeof(text), stdin);		//take care that fgets adds the \n character to the string, so its length includes extra 1
+
+	for (int i = 0, j = strlen(text)-2; i < strlen(text)-1; i++, j--)
+	{
+		newText[i] = text[j];
+	}
+
+	printf("%s", newText);
+}
+
+
+/************************************** Main *****************************************/
 int main()
 {
-	//Ex1_Arrays();
-	//Ex2_Arrays();
-	//Ex3_Arrays();
-	//Ex4_Arrays();
+	printf("Exercise 1_Arrays:\n");
+	Ex1_Arrays();
+	printf("\n\nExercise 2_Arrays:\n");
+	Ex2_Arrays();
+	printf("\n\nExercise 3_Arrays:\n");
+	Ex3_Arrays();
+	printf("\n\nExercise 4_Arrays:\n");
+	Ex4_Arrays();
+	printf("\n\nExercise 5_Arrays:\n");
 	Ex5_Arrays();
+
+	printf("\n\nExercise 1_Strings:\n");
+	Ex1_Strings();
+	printf("\n\nExercise 2_Strings:\n");
+	Ex2_Strings();
+	printf("\n\nExercise 3_Strings:\n");
+	Ex3_Strings();
 
 	return 0;
 }
