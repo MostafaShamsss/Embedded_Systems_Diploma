@@ -242,7 +242,7 @@ void Ex3_Strings()
 /************************************** Main *****************************************/
 int main()
 {
-	printf("Exercise 1_Arrays:\n");
+	/*printf("Exercise 1_Arrays:\n");
 	Ex1_Arrays();
 	printf("\n\nExercise 2_Arrays:\n");
 	Ex2_Arrays();
@@ -251,10 +251,10 @@ int main()
 	printf("\n\nExercise 4_Arrays:\n");
 	Ex4_Arrays();
 	printf("\n\nExercise 5_Arrays:\n");
-	Ex5_Arrays();
+	Ex5_Arrays();*/
 
-	printf("\n\nExercise 1_Strings:\n");
-	Ex1_Strings();
+	//printf("\n\nExercise 1_Strings:\n");
+	//Ex1_Strings();
 	printf("\n\nExercise 2_Strings:\n");
 	Ex2_Strings();
 	printf("\n\nExercise 3_Strings:\n");
